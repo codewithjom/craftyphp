@@ -1,12 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-  <body>
-    <h1>Hello world</h1>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus, incidunt corrupti. Eos ea, ullam nostrum, temporibus beatae veritatis tenetur officiis id vitae optio necessitatibus eum quisquam sequi, quos impedit aliquam!</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <?php 
+    $books = [
+      [
+        'name' => 'Do Androids Dream of Electric Sheep',
+        'author' => 'Philip K. Dick',
+        'releaseYear' => 1968,
+        'purchaseURL' => 'http://example.com'
+      ],
+      [
+        'name' => 'Project Hail Mary',
+        'author' => 'Andy Weir',
+        'releaseYear' => 2021,
+        'purchaseURL' => 'http://example.com'
+      ],
+      [
+        'name' => 'The Martian',
+        'author' => 'Andy Weir',
+        'releaseYear' => 2011,
+        'purchaseURL' => 'http://example.com'
+      ],
+    ];
+  ?>
+
+  <ul>
+    <?php foreach ($books as $book) : ?>
+      <li>
+        <a href="<?= $book['purchaseURL'] ?>">
+          <?= $book['name']; ?> (<?= $book['releaseYear']; ?>)
+        </a>
+      </li>
+    <?php endforeach; ?>
+  </ul>
+</body>
 </html>
