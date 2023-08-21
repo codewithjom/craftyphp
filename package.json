@@ -1,0 +1,15 @@
+{
+  "name": "craftyphp",
+  "version": "1.0.0",
+  "description": "Use CraftyPHP to create beautiful code and express your inner artist.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.3"
+  }
+}
